@@ -1,0 +1,25 @@
+<h1>{{id}}</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <img src="{{course.hinhAnh}}" width="200"alt="">
+        </div>
+        <div class="col-6">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>{{course.tenKhoaHoc}}</th>
+                    </tr>
+                    <tr>
+                        <th>Course</th>
+                        <th>{{course.moTa}}</th>
+                    </tr>
+                    <tr>
+                        <button (click)="dangKyKhoaHoc(course)">Dang Ky Khoa Hoc</button>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>

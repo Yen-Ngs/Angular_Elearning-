@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4" style
+         *ngFor="let item of course">
+            <div class="card text-white bg-primary">
+              <img class="card-img-top" [src]="item.hinhAnh" alt="">
+              <div class="card-body">
+                <h4 class="card-title">{{item.tenKhoaHoc}}</h4>
+                <p class="card-text">{{item.moTa}}</p>
+                <a class="btn btn-success" routerLink="/details/{{item.maKhoaHoc}}">More Details</a>
+                <button class="btn btn-success" data-toggle="modal" data-target="#modelId" (click)="xemChiTiet(item)">
+                  More Details
+                </button>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+x`

@@ -1,0 +1,29 @@
+<h3>Sign in</h3>
+<form #frmLogin="ngForm"  class="container" (ngSubmit)="signIn(frmLogin.value)">
+    <div class="form-group">
+        <p>taiKhoan</p>
+        <input #taiKhoan="ngModel" class="form-control" name="taiKhoan" ngModel minlength="3" maxlength="12"  required>
+        <div class="alert alert-danger" *ngIf="(taiKhoan.touched || taiKhoan.dirty) && taiKhoan.errors">
+            <div class="text text-danger" *ngIf="taiKhoan.errors.required">
+                Blank is not allowed
+            </div>
+            <div class="text text-danger" *ngIf="taiKhoan.errors.minlength || taiKhoan.errors.maxlength">
+                min =6 max =12
+            </div>
+            <!-- <div class="text text-danger" *ngIf="taiKhoan.errors.pattern">
+                special Characters is not allowed
+            </div> -->
+        </div>
+    </div>
+    <div class="form-group">
+        <p>Password</p>
+        <input #password="ngModel" class="form-control" name="matKhau" ngModel>
+    </div>
+    <div class="form-group">
+        <p>Email</p>
+        <input #email="ngModel" class="form-control" name="Email" ngModel>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-success" type="submit" [disabled]="frmLogin.invalid">Sign in</button>
+    </div>
+</form>
